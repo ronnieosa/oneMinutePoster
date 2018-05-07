@@ -1,0 +1,440 @@
+/*公共样式区域*/
+html, body {
+    position: relative;
+    height: 100%;
+}
+body {
+    background: #eee;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto, Microsoft YaHei,'宋体' , Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+    font-size: 14px;
+    color:#333;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Microsoft_YaHei_Bold; /*这里是说明调用来的字体名字*/
+    src: url('../font/msyhbd.ttc'); /*这里是字体文件路径*/
+}
+/*公共样式区域结束*/
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+/*1屏 样式区域*/
+.swiper-slide:first-of-type{
+    background: url(../img/bg1.png) no-repeat center center;
+    position: relative;
+    background-size: cover;
+}
+.swiper-slide:first-of-type .footArea {
+    position: absolute;
+    left:0;
+    bottom:-30px;
+}
+.swiper-slide:first-of-type .container > div:first-of-type{
+    text-align: center;
+    position: relative;
+}
+.swiper-slide:first-of-type .phone-area{
+    display: inline-block;
+
+}
+.swiper-slide:first-of-type .phone-area img{
+    position: absolute;
+    left:-800px;
+}
+.swiper-slide:first-of-type h3{
+    font-size: 36px;
+    color:#ffffff;
+    letter-spacing:5px;
+    margin-bottom: 30px;
+}
+.swiper-slide:first-of-type img.desc-lg{
+    margin-bottom: 50px;
+}
+.swiper-slide:first-of-type a{
+    display: inline-block;
+}
+/*2屏样式区域*/
+.swiper-slide:nth-of-type(2){
+    /*background: url(../img/bg2.png) no-repeat center center;*/
+    background: #ffffff;
+    padding-top: 300px;
+    /*background-size: cover;*/
+}
+.swiper-slide:nth-of-type(2) .desc{
+    padding: 0 200px;
+    padding-top: 25px;
+    display: none;
+}
+.swiper-slide .desc h2{
+    font-family: Microsoft_YaHei_Bold;
+    font-size: 50px;
+    color:#333333;
+}
+.swiper-slide:nth-of-type(2) .desc h2{
+    letter-spacing:5px;
+    line-height: 72px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 28px;
+}
+.swiper-slide .desc p{
+    font-family:Microsoft YaHei;
+    font-size: 24px;
+    color:#333333;
+    text-align: center;
+}
+
+.swiper-slide:nth-of-type(3){
+    background: url(../img/bg3.png) no-repeat center center;
+    padding-top: 170px;
+    background-size: cover;
+}
+.swiper-slide:nth-of-type(3) .container > div{
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+}
+.swiper-slide:nth-of-type(3) .container > div img{
+    position: absolute;
+    right: -300px;
+}
+.swiper-slide:nth-of-type(3) .desc{
+    position: absolute;
+    left: -300px;
+    padding: 25px 0;
+    margin-top: 130px;
+}
+.swiper-slide:nth-of-type(3) .desc h2{
+    margin-top: 75px;
+    margin-bottom: 35px;
+}
+
+.swiper-slide:last-of-type{
+    background: #ffffff;
+}
+.swiper-slide:last-of-type .container{
+    height: 100%;
+    position: relative;
+}
+.swiper-slide:last-of-type .area{
+    margin-top: 240px;
+    text-align: center;
+    display: none;
+}
+.swiper-slide:last-of-type .area .erweima{
+    display: inline-block;
+    width: 282px;
+    height: 282px;
+    margin: 0 auto;
+    padding:12px;
+    background: url(../img/bg-erweima.png) no-repeat center center;
+}
+.swiper-slide:last-of-type .area .btn-area{
+    margin-top: 50px;
+}
+.swiper-slide:last-of-type .area a{
+    display: inline-block;
+    font-size: 0;
+}
+.swiper-slide:last-of-type .container .footer {
+    position: absolute;
+    bottom:30px;
+    left:0;
+    width:100%;
+    text-align: center;
+}
+.swiper-slide:last-of-type .container .footer p{
+    font-family:Microsoft YaHei;
+    font-size: 14px;
+    color:#999999;
+}
+/*右侧指示点样式修改*/
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border:1px solid #fe6072;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #fe6072;
+}
+.swiper-container-vertical>.swiper-pagination-bullets {
+    right: 40px;
+}
+.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 10px 0;
+    display: block;
+}
+
+/*移动端适配*/
+@media only screen and (min-width: 1680px){
+    .swiper-slide:first-of-type{
+        padding-top: 220px;
+    }
+    .swiper-slide:last-of-type .area{
+        margin-top: 280px;
+    }
+}
+@media only screen and (max-width: 1679px){
+    .swiper-slide:first-of-type{
+        padding-top: 210px;
+    }
+}
+@media only screen and (max-width: 1440px){
+    .swiper-slide:first-of-type{
+        padding-top: 120px;
+    }
+    .swiper-slide:nth-of-type(2){
+        padding-top: 240px;
+    }
+    .swiper-slide:nth-of-type(3){
+        padding-top: 95px;
+    }
+    .swiper-slide:last-of-type .area{
+        margin-top: 200px;
+    }
+}
+@media only screen and (max-width: 1366px){
+    .swiper-slide:first-of-type {
+        padding-top: 100px;
+    }
+    .swiper-slide:first-of-type .phone-area img {
+        width: 300px;
+    }
+    .swiper-slide:first-of-type img.desc-lg {
+        width: 450px;
+    }
+    .swiper-slide:nth-of-type(2){
+        padding-top: 175px;
+    }
+    .swiper-slide:nth-of-type(3){
+        padding-top: 65px;
+        background: url(../img/bg3.png) no-repeat center top;
+    }
+    .swiper-slide:nth-of-type(3) .container > div img {
+        width: 410px;
+    }
+    .swiper-slide:last-of-type .area{
+        margin-top: 130px;
+    }
+}
+@media only screen and (max-width: 1024px){
+    .swiper-slide:first-of-type {
+        padding-top: 125px;
+    }
+    .swiper-slide:first-of-type img.desc-lg {
+        width: 410px;
+    }
+    .swiper-slide:nth-of-type(2) .desc h2 {
+        font-size: 48px;
+    }
+    .swiper-slide:nth-of-type(2) .desc p {
+        font-size: 22px;
+    }
+    .swiper-slide:nth-of-type(3) .desc h2 {
+        font-size: 43px;
+    }
+    .swiper-slide:nth-of-type(3) .desc p {
+        font-size: 22px;
+    }
+    .swiper-slide:nth-of-type(3){
+        padding-top: 75px;
+    }
+    .swiper-slide:last-of-type .area{
+        margin-top: 140px;
+    }
+}
+
+/*ipad尺寸适配*/
+@media (max-width: 991px){
+    .swiper-slide:first-of-type {
+        background: url(../img/bg1.png) no-repeat center center;
+        padding-top: 255px;
+        background-size: cover;
+    }
+    .swiper-slide:first-of-type .phone-area img {
+       position: static;
+    }
+    .swiper-slide:first-of-type img.desc-lg {
+        width: 345px;
+    }
+    .swiper-slide:nth-of-type(2) {
+        background-size: cover;
+        padding-top: 320px;
+    }
+    .swiper-slide:nth-of-type(2) .desc {
+        padding: 0 100px;
+        display: block;
+    }
+    .swiper-slide:nth-of-type(2) .desc h2 {
+        font-size: 50px;
+        margin-bottom: 45px;
+    }
+    .swiper-slide:nth-of-type(2) .desc p {
+        font-size: 24px;
+    }
+    .swiper-slide:nth-of-type(3) {
+        padding-top: 65px;
+    }
+    .swiper-slide:nth-of-type(3) .desc {
+        margin-top: 0px;
+        position: static;
+    }
+    .swiper-slide:nth-of-type(3) .container > div img {
+        position: static;
+    }
+    .swiper-slide:nth-of-type(3) .desc h2 {
+        margin-top: 50px;
+        margin-bottom: 35px;
+    }
+    .swiper-slide:nth-of-type(3) .desc p {
+        text-align: left;
+    }
+    .swiper-slide:nth-of-type(3) .container > div:nth-of-type(2){
+        text-align: right;
+    }
+    .swiper-slide:nth-of-type(3) .phoneArea{
+        display: inline-block;
+    }
+    .swiper-slide:last-of-type .area {
+        padding-top: 280px;
+        display: block;
+        margin-top: 0;
+    }
+}
+@media (max-width: 767px){
+    /*移动端rem 适配*/
+    html{
+        font-size: 10px;
+    }
+    /*右边小点*/
+    .swiper-container-vertical>.swiper-pagination-bullets {
+        right: 1.5rem;
+    }
+    .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: .8rem 0;
+    }
+    .swiper-pagination-bullet {
+        width: .8rem;
+        height: .8rem;
+    }
+    /*一屏*/
+    .swiper-slide:first-of-type .footArea {
+        position: absolute;
+        bottom: -6rem;
+        left: 0;
+    }
+    .swiper-slide:first-of-type .container > div:first-of-type {
+        position: absolute;
+        bottom: -5.5rem;
+    }
+    .swiper-slide:first-of-type .phone-area {
+        padding: 0 4.4rem;
+    }
+    .swiper-slide:first-of-type .phone-area img {
+        position: static;
+    }
+    .swiper-slide:first-of-type {
+        background: url(../img/mb_bg1.png) no-repeat center center;
+        padding-top: 2.5rem;
+    }
+    .swiper-slide:first-of-type .container >div{
+        text-align: center;
+    }
+    .swiper-slide:first-of-type h3 {
+        font-size: 1.8rem;
+        letter-spacing: .5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-top: 0;
+    }
+    .swiper-slide:first-of-type .mb-img{
+        margin:0 auto;
+        margin-bottom: 2rem;
+    }
+    .swiper-slide:first-of-type a .btn-app{
+        width:13.8rem;
+    }
+    .swiper-slide:nth-of-type(2) {
+        /*background: url(../img/bg2.png) no-repeat center center;*/
+        padding-top: 17rem;
+    }
+    .swiper-slide:nth-of-type(2) .desc {
+        padding: 0 0;
+        padding-top: 2.5rem;
+        display: block;
+    }
+    .swiper-slide:nth-of-type(2) .desc h2 {
+        font-size: 3rem;
+        letter-spacing: .5rem;
+        line-height: 3.5rem;
+        margin-top: 3.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .swiper-slide:nth-of-type(2) .desc p {
+        font-size: 1.7rem;
+        padding: 0 2rem;
+    }
+    .swiper-slide:nth-of-type(3) .phoneArea {
+        padding: 0 3rem;
+        margin-top: 2rem;
+    }
+    .swiper-slide:nth-of-type(3) {
+        /*background: url(../img/mb_bg2.png) no-repeat center center;*/
+        padding-top: 2rem;
+    }
+    .swiper-slide:nth-of-type(3) .container > div {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .swiper-slide:nth-of-type(3) .desc {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        position: static;
+    }
+    .swiper-slide:nth-of-type(3) .container > div img {
+        position: static;
+    }
+    .swiper-slide:nth-of-type(3) .desc h2 {
+        letter-spacing: 0;
+        line-height: 3.5rem;
+        margin-top: 3.5rem;
+        margin-bottom: 1.8rem;
+        text-align: center;
+        font-size: 2.8rem;
+    }
+    .swiper-slide:nth-of-type(3) .desc p {
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .swiper-slide:last-of-type .area {
+        padding-top: 16rem;
+        text-align: center;
+        display: block;
+        margin-top: 0;
+    }
+    .swiper-slide:last-of-type .area .erweima {
+        width: 20rem;
+        height: 20rem;
+        padding: 1.2rem;
+        background: url(../img/bg-erweima.png) no-repeat center center;
+    }
+    .swiper-slide:last-of-type .area .erweima img{
+        width: 100%;
+    }
+    .swiper-slide:last-of-type .area a {
+        width: 13.8rem;
+    }
+    .swiper-slide:last-of-type .container .footer {
+        bottom: 0;
+    }
+    .swiper-slide:last-of-type .container .footer p {
+        padding: 1rem 0;
+        margin-bottom: 0;
+    }
+}

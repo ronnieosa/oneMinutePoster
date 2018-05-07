@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一分钟-好玩有趣的视频聊天</title>
+    <link rel="stylesheet" href="./lib/swiper.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/index.css">
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="./lib/starlight.js"></script>
+    <script src="./lib/swiper.min.js"></script>
+</head>
+<body>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="col-md-6 col-sm-6">
+                    <div class="phone-area">
+                        <img src="./img/phone1.png" class="img-responsive hidden-xs">
+                        <img src="./img/mb_phone1.png" class="img-responsive visible-xs">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h3>一分钟</h3>
+                    <img src="./img/img-desc.png" class="hidden-xs desc-lg">
+                    <img src="./img/img-desc-mb.png" class="visible-xs mb-img">
+                    <a href="#"><img src="./img/img-appwhit.png" class="btn-app"></a>
+                </div>
+                <div class="footArea">
+                    <img src="./img/onefoot.png" class="hidden-xs img-responsive">
+                    <img src="./img/mb_onefoot.png" class="visible-xs">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide starlight">
+            <div class="container">
+               <div class="desc">
+                    <h2>线上视频聊天，打破不真实的照片交友</h2>
+                    <p>打破不真实的照片交友，麻麻再也不担心我交朋友了！</p>
+               </div>
+            </div>
+        </div>
+        <div class="swiper-slide starlight">
+            <div class="container">
+                <div class="col-md-7 col-sm-12">
+                    <div class="desc">
+                        <h2>60s怎么够，心动匹配增时长</h2>
+                        <p>长得这么美，歌唱得这么好，怎么可以不心动~</p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-12">
+                    <div class="phoneArea">
+                        <img src="./img/phone2.png" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <div class="area">
+                    <div class="erweima">
+                        <img src="./img/erweima.png" alt="">
+                    </div>
+                    <div class="btn-area">
+                        <a href="#">
+                            <img src="./img/img-appblack.png" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer">
+                    <p>陕ICP备17001630号 © 2018 西安乐推网络科技有限公司 All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+</body>
+</html>
+<script>
+    $(function(){
+        $(".phone-area img").animate({left:"110px"},1000,'easeOutBounce');
+
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            direction: 'vertical',
+            mousewheelControl: true, //鼠标滚动切换
+            effect:"fade",
+            onSlideChangeEnd:function(swiper){    //监听swiper滚动事件
+                var windowWidth = $(window).width();
+                if(windowWidth > 800){
+                    switch(swiper.activeIndex){
+                        case 0:
+                            $(".phone-area img").animate({left:"110px"},1000,'easeOutBounce');
+                            //2 swipe
+                            $(".swiper-slide:nth-of-type(2) .desc").fadeOut();
+                            //  3swipe
+                            $(".phoneArea img").css("right","-300px");
+                            $(".swiper-slide:nth-of-type(3) .desc").css('left','-300px');
+                            // 4swipe
+                            $(".area").hide();
+                            break;
+                        case 1:
+                            // 1 swipe
+                            $(".phone-area img").css('left','-800px');
+                            // 2 swipe
+                            $(".swiper-slide:nth-of-type(2) .desc").fadeIn(2000);
+                            //  3swipe
+                            $(".phoneArea img").css("right","-300px");
+                            $(".swiper-slide:nth-of-type(3) .desc").css('left','-300px');
+                            // 4swipe
+                            $(".area").hide();
+                            break;
+                        case 2:
+                            // 1swipe
+                            $(".phone-area img").css('left','-800px');
+
+                            $(".phoneArea img").animate({right:"0"},500,'easeInCirc');
+                            $(".swiper-slide:nth-of-type(3) .desc").animate({left:"0"},500,'easeInExpo');
+                            // 2swipe
+                            $(".swiper-slide:nth-of-type(2) .desc").fadeOut();
+                            // 4swipe
+                            $(".area").hide();
+                            break;
+                        case 3:
+                            // 1swipe
+                            $(".phone-area img").css('left','-800px');
+                            // 2swipe
+                            $(".swiper-slide:nth-of-type(2) .desc").fadeOut();
+                            //  3swipe
+                            $(".phoneArea img").css("right","-300px");
+                            $(".swiper-slide:nth-of-type(3) .desc").css('left','-300px');
+                            // 4swipe
+                            $(".area").fadeIn(1000);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        });
+
+    });
+
+</script>
